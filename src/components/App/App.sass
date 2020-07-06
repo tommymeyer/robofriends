@@ -1,0 +1,32 @@
+@font-face
+  font-family: 'SEGA LOGO FONT'
+  font-style: normal
+  font-weight: normal
+  src: local('SEGA LOGO FONT'), url('../../fonts/SEGA.woff') format('woff')
+
+$primary-color: #cdecff
+
+@keyframes blink
+  0%
+    opacity: 1
+  100%
+    opacity: 1
+  50%
+    opacity: 0
+
+
+h1
+  color: $primary-color
+  font-family: 'SEGA LOGO FONT', sans-serif
+  font-size: 3rem
+  font-weight: 200
+  &.loading
+    -webkit-animation: blink 4s infinite; // Safari 4+
+    -moz-animation: blink 4s infinite; // Fx 5+
+    -o-animation: blink 4s infinite // Opera 12+
+    animation: blink 4s infinite; // IE 10+, Fx 29+
+    font-size: 16vw
+    margin: 40vh 0 0 0
+    text-align: center
+    @media screen and ( min-width: 600px)
+      font-size: 6rem
